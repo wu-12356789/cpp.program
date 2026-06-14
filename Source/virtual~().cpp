@@ -8,7 +8,7 @@ class Animal
     {
         cout<<"Animal的构造函数被调用了"<<endl;
     }
-    ~Animal()
+    virtual ~Animal()
     {
         cout<<"Animal的析构函数被调用了"<<endl;
     }
@@ -45,7 +45,7 @@ class Cat:public Animal
 };
 void test01()
 {
-    Cat *cat = new Cat("Tom");
+    Animal *cat = new Cat("Tom");
     cat->speak();
     delete cat;
 }
